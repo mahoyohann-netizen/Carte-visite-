@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:ROUVIER;Carole;;;
+FN:Carole ROUVIER
+ORG:Hôtel Pullman Cannes Mandelieu
+TITLE:Directrice Commerciale
+TEL;TYPE=CELL:+33613334952
+TEL;TYPE=WORK:+33492977011
+EMAIL;TYPE=WORK:carole.rouvier@accor.com
+ADR;TYPE=WORK:;;605 avenue du Général de Gaulle;Mandelieu-la-Napoule;Alpes-Maritimes;06210;France
+END:VCARD
