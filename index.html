@@ -2,27 +2,85 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Carole ROUVIER - Contact</title>
+<meta name="description" content="Carole ROUVIER, Directrice Commerciale, Hôtel Pullman Cannes Mandelieu">
 <style>
-body { font-family: sans-serif; text-align: center; padding: 20px; background: #f5f5f5; }
-.card { max-width: 400px; margin: auto; background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.btn { display: inline-block; margin-top: 15px; padding: 12px 24px; background: #0056b3; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
-a { color: #0056b3; }
+:root{
+  --teal:#0f5f74; --teal-soft:#e7f1f4; --bg:#e9edf1; --card:#ffffff; --fg:#16202b; --muted:#5a6573; --line:#d3d9e0;
+}
+@media (prefers-color-scheme: dark){:root{--bg:#0f141a; --card:#1b242e; --fg:#e6ebf0; --muted:#98a3b1; --line:#2a3541; --teal-soft:#1b3139}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);
+  min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:24px max(16px,env(safe-area-inset-right)) 32px max(16px,env(safe-area-inset-left))}
+.card{width:100%;max-width:420px;background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(10,20,30,.15);position:relative}
+.top{background:linear-gradient(170deg,var(--teal) 0%,var(--teal) 82%,var(--card) 82.4%);color:#fff;padding:28px 24px 44px;display:grid;gap:2px}
+.avatar{width:68px;height:68px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;font-weight:700;font-size:25px;margin-bottom:12px;box-shadow:0 0 0 4px rgba(255,255,255,.25)}
+h1{font-size:24px;line-height:1.15;margin:0}
+.role{font-size:15px;opacity:.95}
+.org{font-size:14px;opacity:.85}
+.lang{position:absolute;top:16px;right:16px;display:flex;background:rgba(255,255,255,.18);border-radius:999px;padding:3px;gap:2px}
+.lang button{font:inherit;font-size:13px;font-weight:600;color:#fff;background:transparent;border:0;border-radius:999px;padding:5px 11px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--teal)}
+.list{padding:8px 18px 22px;display:grid;gap:10px}
+.b{display:flex;align-items:center;gap:12px;width:100%;font-size:16px;font-weight:600;color:var(--fg);text-decoration:none;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:transform .15s ease,box-shadow .15s ease}
+.b:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(15,95,116,.18)}
+.b:active{transform:scale(.97)}
+.b:focus-visible,.lang button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.ic{width:36px;height:36px;border-radius:10px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;flex:none}
+.ic svg{width:19px;height:19px}
+.b small{display:block;font-weight:400;font-size:13px;color:var(--muted);line-height:1.35}
+.b.main{background:var(--teal);color:#fff;border-color:var(--teal);justify-content:center;margin-top:4px}
+.b.main .ic{background:rgba(255,255,255,.18);color:#fff}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:none}}
+@keyframes bounceIn{0%{opacity:0;transform:translateY(24px) scale(.92)}60%{opacity:1;transform:translateY(-6px) scale(1.02)}80%{transform:translateY(2px)}100%{opacity:1;transform:none}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(15,95,116,.55)}70%{box-shadow:0 0 0 14px rgba(15,95,116,0)}100%{box-shadow:0 0 0 0 rgba(15,95,116,0)}}
+.play .top>*{animation:fadeUp .5s ease both}
+.play .top>*:nth-child(2){animation-delay:.08s}.play .top>*:nth-child(3){animation-delay:.16s}.play .top>*:nth-child(4){animation-delay:.22s}
+.play .b{animation:bounceIn .7s cubic-bezier(.2,.8,.3,1) both}
+.play .b:nth-child(1){animation-delay:.35s}.play .b:nth-child(2){animation-delay:.47s}.play .b:nth-child(3){animation-delay:.59s}.play .b:nth-child(4){animation-delay:.71s}
+.play .b.main{animation-delay:.85s}
+.play .b.main.pulsing{animation:pulse 1.8s ease-out infinite}
+@media (prefers-reduced-motion: reduce){.play *{animation:none!important}}
 </style>
 </head>
 <body>
-<div class="card">
-<h1>Carole ROUVIER</h1>
-<p><strong>Hôtel Pullman Cannes Mandelieu</strong></p>
-<p>Directrice Commerciale</p>
-<hr>
-<p>Mobile : <a href="tel:+33613334952">06 13 33 49 52</a></p>
-<p>Bureau : <a href="tel:+33492977011">04 92 97 70 11</a></p>
-<p>E-mail : <a href="mailto:carole.rouvier@accor.com">carole.rouvier@accor.com</a></p>
-<p>Adresse :<br>605, avenue du Général de Gaulle<br>06210 Mandelieu-la-Napoule<br>Alpes-Maritimes</p>
-<br>
-<a href="vcard.vcf" download="Carole-ROUVIER.vcf" class="btn">Télécharger / Download</a>
-</div>
+<main class="card play" id="card">
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+  <header class="top">
+    <div class="avatar" aria-hidden="true">CR</div>
+    <h1>Carole ROUVIER</h1>
+    <div class="role" data-fr="Directrice Commerciale" data-en="Sales Director">Directrice Commerciale</div>
+    <div class="org">Hôtel Pullman Cannes Mandelieu</div>
+  </header>
+  <nav class="list">
+    <a class="b" href="tel:+33613334952"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><span data-fr="Mobile" data-en="Mobile">Mobile</span><small>06 13 33 49 52</small></span></a>
+    <a class="b" href="tel:+33492977011"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg></span><span><span data-fr="Bureau" data-en="Office">Bureau</span><small>04 92 97 70 11</small></span></a>
+    <a class="b" href="mailto:carole.rouvier@accor.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span><span data-fr="E-mail" data-en="Email">E-mail</span><small>carole.rouvier@accor.com</small></span></a>
+    <a class="b" href="https://www.google.com/maps/search/?api=1&amp;query=605+avenue+du+G%C3%A9n%C3%A9ral+de+Gaulle+06210+Mandelieu-la-Napoule" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><span data-fr="Itinéraire" data-en="Directions">Itinéraire</span><small>605, avenue du Général de Gaulle<br>06210 Mandelieu-la-Napoule</small></span></a>
+    <a class="b main" id="save" href="vcard.vcf" download="Carole-ROUVIER.vcf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><span data-fr="Enregistrer le contact" data-en="Save contact">Enregistrer le contact</span></a>
+  </nav>
+</main>
+<script>
+(function(){
+  var card=document.getElementById('card'), save=document.getElementById('save'), t;
+  function play(){ save.classList.remove('pulsing'); card.classList.remove('play'); void card.offsetWidth; card.classList.add('play');
+    clearTimeout(t); t=setTimeout(function(){save.classList.add('pulsing');},1500); }
+  function setLang(l, replay){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-fr]').forEach(function(e){e.textContent=e.getAttribute('data-'+l);});
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed', b.getAttribute('data-l')===l?'true':'false');});
+    if(replay) play();
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-l'),true);});});
+  var nav=(navigator.language||'fr').toLowerCase();
+  setLang(nav.indexOf('fr')===0?'fr':'en', false);
+  play();
+})();
+</script>
 </body>
 </html>
